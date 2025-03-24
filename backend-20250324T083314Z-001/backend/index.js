@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 
 // Routes for managing events
 app.get('/events', async (req, res) => {
+    fetch("http://localhost:5173/register")
     try {
         const events = await EventItem.find();
         res.json(events);
@@ -30,6 +31,7 @@ app.get('/events', async (req, res) => {
 
 app.post('/events', async (req, res) => {
     const { name, date, location } = req.body;
+    fetch("http://localhost:5173/register")
 
     const newEvent = new EventItem({
         name,

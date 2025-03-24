@@ -5,7 +5,7 @@ import EventItem from "./EventItem";
 function EventList() {
     return(
         <>
-         <EventForm/>
+         {/* <EventForm/> */}
          <EventItem/>
         </>
     );
